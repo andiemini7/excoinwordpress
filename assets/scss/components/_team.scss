@@ -1,0 +1,48 @@
+.team_container{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+    .team{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        &_title{
+            color: #171717;
+            text-align: center;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0 0 32px 0;
+        }
+        &_member{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 282px;
+                height: 282px;
+            }
+    
+            &_name{
+                color: #171717;
+                text-align: center;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: uppercase;
+                margin: 24px 0 8px 0;
+            }
+            &_position{
+                color: #171717;
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 28px; /* 175% */
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.value_info{
+    background: #2579B8;
+
+    &_base{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 68px 0;
+        flex-direction: column;
+        @include media ( md ) {
+            flex-direction: unset;
+        }
+        &_volume, &_countries, &_assets{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title{
+                color: #FFF;
+                text-align: center;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .description{
+                color: #FFF;
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 28px; /* 175% */
+                margin-top: 8px;
+            }
+        }
+    }
+}

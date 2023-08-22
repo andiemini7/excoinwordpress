@@ -1,0 +1,22 @@
+body{
+    background-image: url("/wp-content/themes/exCoin/images/bg-image.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+@import './container';
+@import './footer';
+@import './nav-bar';
+@import './buttons';
+@import './content';
+@import './review-header';
+@import './cta-banner';
+@import './crypto';
+@import './checkpoints-header';
+@import './value-info';
+@import './offers';
+@import './batm-locations';
+@import './top-info-header';
+@import './thumbnail-container';
+@import './team';
+@import './faq';

@@ -1,0 +1,252 @@
+.crypto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 0 0;
+    flex-direction: column;
+
+    @include media ( md ) {
+        flex-direction: unset;
+    }
+
+    &_marketplace{
+        border-radius: 16px;
+        border: 2px solid #E4E4E4;
+        max-width: 588px;
+        margin: 0 0 24px 0;
+
+        @include media ( md ) {
+            margin: 0 24px 0 0;
+            width: 100%;
+            padding: 24px 32px;
+        }
+        &_tabs{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0 0 24px 0;
+            border-radius: 8px;
+            background: var(--f-5-f-5-fa-primary, #F5F5FA);
+            padding: 9px 61px;
+
+            &_buy{
+                text-align: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 21px;
+                color: var(--8083-a-3, #8083A3);
+                padding: 5px 50px;
+            }
+
+            &_sell{
+                text-align: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 21px;
+                color: var(--8083-a-3, #8083A3);
+                padding: 5px 50px;
+            }
+
+            .active{
+                color: #2579B8;
+                border-bottom: 2px solid #2579B8;
+            }
+        }
+
+        &_buy{
+            &_dropdowns{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 0 20px 0;
+                border-bottom: 1px solid #D8D8D8;
+
+                &_coin{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-right: 24px;
+
+                    label{
+                        color: #000;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 100%;
+                        margin: 0 0 8px 0;
+                        padding: 0 0 0 24px;
+                    }
+
+                    select{
+                        padding: 13px 24px;
+                        border-radius: 100px;
+                        border: 1px solid #C1C1C1;
+                        background: #FFF;
+                        width: 100%;
+                        margin: 0 0 16px 0;
+                    }
+
+                    .fee {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0 24px;
+
+                        &_title{
+                            color: #171717;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+
+                        &_price{
+                            color: #171717;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+
+                }
+
+                &_amount{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    label{
+                        color: #000;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 100%;
+                        margin: 0 0 8px 0;
+                        padding: 0 0 0 24px;
+                    }
+
+                    select{
+                        padding: 13px 24px;
+                        border-radius: 100px;
+                        border: 1px solid #C1C1C1;
+                        background: #FFF;
+                        width: 100%;
+                        margin: 0 0 16px 0;
+                    }
+
+                    .fee {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0 24px;
+
+                        &_title{
+                            color: #171717;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+
+                        &_price{
+                            color: #171717;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+            &_price{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 16px 24px 0 24px;
+
+                &_title{
+                    color: #171717;
+                    text-align: right;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                &_amount{
+                    color: #171717;
+                    text-align: right;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    &_prices{
+        border-radius: 16px;
+        border: 2px solid #E4E4E4;
+        max-width: 588px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 24px;
+
+        @include media ( md ) {
+            width: 100%;
+        }
+        &_info{
+            display: flex;
+
+            img {
+                height: 40px;
+                width: 40px;
+            }
+
+            &_title{
+                display: flex;
+                flex-direction: column;
+                margin: 0 0 0 16px;
+
+                .shortcode{
+                    color: #171717;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+        }
+
+        &_value{
+            &_title{
+                color: #171717;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        &_change{
+            display: flex;
+            align-items: center;
+
+            &_title{
+                color: #171717;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            img{
+                width: 16;
+                height: 16;
+                margin:0px 8px;
+            }
+        }
+    }
+    
+}

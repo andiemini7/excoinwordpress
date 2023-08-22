@@ -1,0 +1,76 @@
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.container {
+    padding-inline: 20px;
+    @include media ( xl ) {
+        padding-inline: 140px;
+    }
+
+    @include media (2xl) {
+        padding-inline: 250px;
+    }
+    width: auto;
+}
+
+p:has(.aligncenter) {
+    display: flex;
+    justify-content: center;
+}
+
+p:has(.alignright) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+
+    @include media ( lg ) {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        
+        img {
+            margin-left: 20px;
+        }
+    }
+}
+
+p:has(.alignleft) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+
+    @include media ( lg ) {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+
+        img {
+            margin-right: 20px;
+        }
+    }
+}
+
+.aligncenter {
+    margin-inline: auto;
+}
+
+.alignright {
+    @include media ( lg ) {
+        margin-left: auto;
+    }
+}

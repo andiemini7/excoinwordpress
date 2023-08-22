@@ -1,0 +1,62 @@
+.content {
+    margin-block: 10px;
+  
+    @include media(lg) {
+      margin-block: 20px;
+    }
+  
+    h1, h2, h3, h4, h5, h6, p {
+      font-family: 'Josefin Sans';
+    }
+  
+    h2 {
+      margin-bottom: 13.05px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      color: $maire;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      color: $black;
+      text-align: justify;
+
+      @include media ( lg ) {
+        font-size: 18px;
+      }
+    }
+  
+    ul {
+      list-style-type: unset;
+      padding-left: 16px;
+      font-style: normal;
+      font-size: 16px;
+      font-family: 'Josefin Sans';
+  
+      li {
+        margin: 0 0 8px 8px;
+      }
+    }
+  
+    ol {
+      font-style: normal;
+      font-size: 16px;
+      font-family: 'Josefin Sans';
+    }
+  
+    @media only screen and (max-width: 600px) {
+      .wp-caption, img {
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+}

@@ -1,0 +1,55 @@
+.cta_banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 24px;
+    border: 2px solid #B9DAF3;
+    background: rgba(37, 121, 184, 0.11);
+    padding: 26px 64px 20px 64px;
+    flex-direction: column;
+    
+    @include media ( md ) {
+        flex-direction: unset;
+    }
+    &_icon{
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+    &_base{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_ribbon{
+            background-color: var(--yellow-yellow-400, #FD0);
+            filter: drop-shadow(0px 2px 8px rgba(0, 55, 61, 0.16));
+            color: var(--dark-dark-700-recharge, #00373D);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            padding: 5px 10px;
+            margin: 0 0 16px 0;
+            border-radius: 8px;
+        }
+        &_title{
+            color: #171717;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        &_description{
+            color: #171717;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+}

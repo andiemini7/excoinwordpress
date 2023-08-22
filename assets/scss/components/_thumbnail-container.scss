@@ -1,0 +1,47 @@
+.thumbnail_container{
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    @include media ( md ) {
+        flex-direction: unset;
+    }
+    img{
+        width: 100%;
+        height: 374px;
+        @include media ( md ) {
+            width: 486px;
+        }
+    }
+
+    &_body{
+        display: flex;
+        flex-direction: column;
+        max-width: 486px;
+
+        &_ribbon{
+            color: #171717;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        &_header{
+            color: #171717;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 16px 0;
+        }
+        &_content{
+            color: #171717;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px; /* 175% */
+        }
+    }
+}
