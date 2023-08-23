@@ -1,0 +1,64 @@
+.cf-contact-form {
+    display: flex;
+}
+
+.contact-form-selection {
+    display: flex;
+}
+
+.contact-form-excoin-header h1{
+    color: #171717;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-form-excoin-header .description {
+    color: #171717;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+}
+
+.contact-form-excoin-header .chat {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+}
+
+.contact-form-selection {
+    display: flex;
+    gap: 24px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    padding: 13px 24px;
+    border-radius: 100px;
+    border: 1px solid #C1C1C1;
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea {
+    border-radius: 24px;
+    border: 1px solid #C1C1C1;
+    padding: 13px 24px;
+    height: 80px;
+    width: -webkit-fill-available;
+}
+
+input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    border-radius: 100px;
+    border-bottom: 2px solid rgba(23, 23, 23, 0.20);
+    background: #2579B8;
+    padding: 16px 24px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+}
