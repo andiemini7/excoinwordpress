@@ -4,7 +4,9 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    gap: 20px;
     @include media ( md ) {
+        gap: unset;
         flex-direction: unset;
     }
     img{

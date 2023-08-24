@@ -11,7 +11,7 @@
     background: #F1F1F1;
     margin-bottom: 16px;
     overflow: hidden;
-    width: 100%;
+    width: -webkit-fill-available;
     
     @include media ( md ) {
         max-width: 792px;

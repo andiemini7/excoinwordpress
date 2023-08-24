@@ -7,7 +7,10 @@
         justify-content: space-around;
         padding: 68px 0;
         flex-direction: column;
+        gap: 30px;
+
         @include media ( md ) {
+            gap: unset;
             flex-direction: unset;
         }
         &_volume, &_countries, &_assets{

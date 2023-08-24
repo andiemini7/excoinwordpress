@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuBar = document.querySelector('.menu-bar');
     const navbarMenu = document.querySelector('.navbar-menu');
-    
+    const bodyclass = document.body;
     menuBar.addEventListener('click', function() {
         navbarMenu.classList.toggle('show-menu');
+        bodyclass.classList.toggle('stop-scroll');
     });
 });
 

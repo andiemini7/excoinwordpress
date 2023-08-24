@@ -33,8 +33,11 @@
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
+        gap: 23px;
+
         @include media ( md ) {
             flex-direction: unset;
+            gap: unset;
         }
         &_item{
             display: flex;
