@@ -1,35 +1,40 @@
-.crypto{
+.crypto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 24px 0 0 0;
     flex-direction: column;
 
-    @include media ( md ) {
+    @include media (md) {
         flex-direction: unset;
     }
 
-    &_marketplace{
+    &_marketplace {
         border-radius: 16px;
         border: 2px solid #E4E4E4;
-        max-width: 588px;
+        width: 100%;
         margin: 0 0 24px 0;
 
-        @include media ( md ) {
+        @include media (md) {
             margin: 0 24px 0 0;
-            width: 100%;
+            max-width: 588px;
             padding: 24px 32px;
         }
-        &_tabs{
+
+        &_tabs {
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            margin: 0 0 24px 0;
             border-radius: 8px;
             background: var(--f-5-f-5-fa-primary, #F5F5FA);
-            padding: 9px 61px;
+            padding: 14px;
 
-            &_buy{
+            @include media (md) {
+                margin: 0 0 24px 0;
+                justify-content: space-around;
+                padding: 9px 61px;
+            }
+
+            &_buy {
                 text-align: center;
                 font-size: 12px;
                 font-style: normal;
@@ -37,9 +42,10 @@
                 line-height: 21px;
                 color: var(--8083-a-3, #8083A3);
                 padding: 5px 50px;
+                cursor: pointer;
             }
 
-            &_sell{
+            &_sell {
                 text-align: center;
                 font-size: 12px;
                 font-style: normal;
@@ -47,28 +53,41 @@
                 line-height: 21px;
                 color: var(--8083-a-3, #8083A3);
                 padding: 5px 50px;
+                cursor: pointer;
             }
 
-            .active{
+            .active {
                 color: #2579B8;
                 border-bottom: 2px solid #2579B8;
             }
         }
 
-        &_buy{
-            &_dropdowns{
+        &_buy {
+            &_dropdowns {
                 display: flex;
-                justify-content: space-between;
-                padding: 0 0 20px 0;
+                flex-direction: column;
                 border-bottom: 1px solid #D8D8D8;
+                padding: 20px;
+                gap: 20px;
 
-                &_coin{
+                @include media (md) {
+                    flex-direction: row;
+                    gap: unset;
+                    justify-content: space-between;
+                    padding: 0 0 20px 0;
+                }
+
+                &_coin {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     margin-right: 24px;
 
-                    label{
+                    .coin-amount {
+                        display: flex;
+                    }
+
+                    label {
                         color: #000;
                         font-size: 16px;
                         font-style: normal;
@@ -78,13 +97,27 @@
                         padding: 0 0 0 24px;
                     }
 
-                    select{
+                    select {
+                        width: 100%;
+                        padding: 13px 10px;
+                        border-radius: 100px;
+                        border-bottom-right-radius: 0;
+                        border-top-right-radius: 0;
+                        border: 1px solid #C1C1C1;
+                        background: #FFF;
+                        margin: 0 0 16px 0;
+                    }
+
+                    input#coin-amount {
                         padding: 13px 24px;
                         border-radius: 100px;
+                        border-bottom-left-radius: 0;
+                        border-top-left-radius: 0;
                         border: 1px solid #C1C1C1;
                         background: #FFF;
                         width: 100%;
                         margin: 0 0 16px 0;
+                        border-left: unset;
                     }
 
                     .fee {
@@ -92,7 +125,7 @@
                         justify-content: space-between;
                         padding: 0 24px;
 
-                        &_title{
+                        &_title {
                             color: #171717;
                             font-size: 14px;
                             font-style: normal;
@@ -100,7 +133,7 @@
                             line-height: normal;
                         }
 
-                        &_price{
+                        &_price {
                             color: #171717;
                             font-size: 16px;
                             font-style: normal;
@@ -111,12 +144,12 @@
 
                 }
 
-                &_amount{
+                &_amount {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
 
-                    label{
+                    label {
                         color: #000;
                         font-size: 16px;
                         font-style: normal;
@@ -126,21 +159,40 @@
                         padding: 0 0 0 24px;
                     }
 
-                    select{
-                        padding: 13px 24px;
-                        border-radius: 100px;
-                        border: 1px solid #C1C1C1;
-                        background: #FFF;
-                        width: 100%;
-                        margin: 0 0 16px 0;
+                    .amount_inputs {
+                        display: flex;
+
+                        input {
+                            padding: 13px 24px;
+                            border-radius: 100px;
+                            border-bottom-right-radius: 0;
+                            border-top-right-radius: 0;
+                            border: 1px solid #C1C1C1;
+                            background: #FFF;
+                            width: 100%;
+                            margin: 0 0 16px 0;
+                            border-right: unset;
+                        }
+
+                        select {
+                            padding: 13px 10px;
+                            border-radius: 100px;
+                            border-bottom-left-radius: 0;
+                            border-top-left-radius: 0;
+                            border: 1px solid #C1C1C1;
+                            background: #FFF;
+                            margin: 0 0 16px 0;
+                            border-left: unset;
+                        }
                     }
+
 
                     .fee {
                         display: flex;
                         justify-content: space-between;
                         padding: 0 24px;
 
-                        &_title{
+                        &_title {
                             color: #171717;
                             font-size: 14px;
                             font-style: normal;
@@ -148,7 +200,7 @@
                             line-height: normal;
                         }
 
-                        &_price{
+                        &_price {
                             color: #171717;
                             font-size: 16px;
                             font-style: normal;
@@ -158,46 +210,62 @@
                     }
                 }
             }
-            &_price{
+
+            &_price {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 16px 24px 0 24px;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
 
-                &_title{
-                    color: #171717;
-                    text-align: right;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
+                @include media (md) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 16px 24px 0 24px;
+
                 }
 
-                &_amount{
-                    color: #171717;
-                    text-align: right;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
+                &_total {
+                    &_title {
+                        color: #171717;
+                        text-align: right;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+
+                    &_amount {
+                        color: #171717;
+                        text-align: right;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
                 }
+
             }
         }
     }
 
-    &_prices{
+
+    &_prices {
         border-radius: 16px;
         border: 2px solid #E4E4E4;
-        max-width: 588px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 22px 24px;
+        padding: 22px 15px;
+        gap: 20px;
 
-        @include media ( md ) {
-            width: 100%;
+        @include media (md) {
+            gap: unset;
+            max-width: 588px;
+            padding: 22px 24px;
         }
-        &_info{
+
+        &_info {
             display: flex;
 
             img {
@@ -205,12 +273,12 @@
                 width: 40px;
             }
 
-            &_title{
+            &_title {
                 display: flex;
                 flex-direction: column;
                 margin: 0 0 0 16px;
 
-                .shortcode{
+                .shortcode {
                     color: #171717;
                     font-size: 20px;
                     font-style: normal;
@@ -220,8 +288,8 @@
             }
         }
 
-        &_value{
-            &_title{
+        &_value {
+            &_title {
                 color: #171717;
                 font-size: 14px;
                 font-style: normal;
@@ -230,23 +298,54 @@
             }
         }
 
-        &_change{
+        &_change {
             display: flex;
+            flex-direction: column;
             align-items: center;
 
-            &_title{
+            @include media (md) {
+                flex-direction: row;
+
+            }
+
+            &_title {
                 color: #171717;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
             }
-            img{
+
+            img {
                 width: 16;
                 height: 16;
-                margin:0px 8px;
+                margin: 0px 8px;
             }
         }
     }
-    
+
+    .crypto_items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include media (md) {
+            width: 100%;
+        }
+    }
+}
+
+.crypto_marketplace_buy,
+.crypto_marketplace_sell {
+    display: none;
+}
+
+.crypto_marketplace_buy.active,
+.crypto_marketplace_sell.active {
+    display: block;
+}
+
+.crypto_marketplace_tabs_buy.active,
+.crypto_marketplace_tabs_sell.active {
+    /* Add styles for active state, like a different background or text color */
 }

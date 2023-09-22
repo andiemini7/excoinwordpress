@@ -614,24 +614,29 @@ body {
 .crypto_marketplace {
   border-radius: 16px;
   border: 2px solid #E4E4E4;
-  max-width: 588px;
+  width: 100%;
   margin: 0 0 24px 0;
 }
 @media (min-width: 768px) {
   .crypto_marketplace {
     margin: 0 24px 0 0;
-    width: 100%;
+    max-width: 588px;
     padding: 24px 32px;
   }
 }
 .crypto_marketplace_tabs {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin: 0 0 24px 0;
   border-radius: 8px;
   background: var(--f-5-f-5-fa-primary, #F5F5FA);
-  padding: 9px 61px;
+  padding: 14px;
+}
+@media (min-width: 768px) {
+  .crypto_marketplace_tabs {
+    margin: 0 0 24px 0;
+    justify-content: space-around;
+    padding: 9px 61px;
+  }
 }
 .crypto_marketplace_tabs_buy {
   text-align: center;
@@ -641,6 +646,7 @@ body {
   line-height: 21px;
   color: var(--8083-a-3, #8083A3);
   padding: 5px 50px;
+  cursor: pointer;
 }
 .crypto_marketplace_tabs_sell {
   text-align: center;
@@ -650,6 +656,7 @@ body {
   line-height: 21px;
   color: var(--8083-a-3, #8083A3);
   padding: 5px 50px;
+  cursor: pointer;
 }
 .crypto_marketplace_tabs .active {
   color: #2579B8;
@@ -657,15 +664,27 @@ body {
 }
 .crypto_marketplace_buy_dropdowns {
   display: flex;
-  justify-content: space-between;
-  padding: 0 0 20px 0;
+  flex-direction: column;
   border-bottom: 1px solid #D8D8D8;
+  padding: 20px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .crypto_marketplace_buy_dropdowns {
+    flex-direction: row;
+    gap: unset;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+  }
 }
 .crypto_marketplace_buy_dropdowns_coin {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-right: 24px;
+}
+.crypto_marketplace_buy_dropdowns_coin .coin-amount {
+  display: flex;
 }
 .crypto_marketplace_buy_dropdowns_coin label {
   color: #000;
@@ -677,12 +696,25 @@ body {
   padding: 0 0 0 24px;
 }
 .crypto_marketplace_buy_dropdowns_coin select {
+  width: 100%;
+  padding: 13px 10px;
+  border-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #C1C1C1;
+  background: #FFF;
+  margin: 0 0 16px 0;
+}
+.crypto_marketplace_buy_dropdowns_coin input#coin-amount {
   padding: 13px 24px;
   border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   border: 1px solid #C1C1C1;
   background: #FFF;
   width: 100%;
   margin: 0 0 16px 0;
+  border-left: unset;
 }
 .crypto_marketplace_buy_dropdowns_coin .fee {
   display: flex;
@@ -717,13 +749,29 @@ body {
   margin: 0 0 8px 0;
   padding: 0 0 0 24px;
 }
-.crypto_marketplace_buy_dropdowns_amount select {
+.crypto_marketplace_buy_dropdowns_amount .amount_inputs {
+  display: flex;
+}
+.crypto_marketplace_buy_dropdowns_amount .amount_inputs input {
   padding: 13px 24px;
   border-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
   border: 1px solid #C1C1C1;
   background: #FFF;
   width: 100%;
   margin: 0 0 16px 0;
+  border-right: unset;
+}
+.crypto_marketplace_buy_dropdowns_amount .amount_inputs select {
+  padding: 13px 10px;
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 1px solid #C1C1C1;
+  background: #FFF;
+  margin: 0 0 16px 0;
+  border-left: unset;
 }
 .crypto_marketplace_buy_dropdowns_amount .fee {
   display: flex;
@@ -746,11 +794,19 @@ body {
 }
 .crypto_marketplace_buy_price {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 24px 0 24px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
-.crypto_marketplace_buy_price_title {
+@media (min-width: 768px) {
+  .crypto_marketplace_buy_price {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px 0 24px;
+  }
+}
+.crypto_marketplace_buy_price_total_title {
   color: #171717;
   text-align: right;
   font-size: 18px;
@@ -758,7 +814,7 @@ body {
   font-weight: 700;
   line-height: normal;
 }
-.crypto_marketplace_buy_price_amount {
+.crypto_marketplace_buy_price_total_amount {
   color: #171717;
   text-align: right;
   font-size: 18px;
@@ -769,15 +825,17 @@ body {
 .crypto_prices {
   border-radius: 16px;
   border: 2px solid #E4E4E4;
-  max-width: 588px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 24px;
+  padding: 22px 15px;
+  gap: 20px;
 }
 @media (min-width: 768px) {
   .crypto_prices {
-    width: 100%;
+    gap: unset;
+    max-width: 588px;
+    padding: 22px 24px;
   }
 }
 .crypto_prices_info {
@@ -808,7 +866,13 @@ body {
 }
 .crypto_prices_change {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .crypto_prices_change {
+    flex-direction: row;
+  }
 }
 .crypto_prices_change_title {
   color: #171717;
@@ -821,6 +885,31 @@ body {
   width: 16;
   height: 16;
   margin: 0px 8px;
+}
+.crypto .crypto_items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .crypto .crypto_items {
+    width: 100%;
+  }
+}
+
+.crypto_marketplace_buy,
+.crypto_marketplace_sell {
+  display: none;
+}
+
+.crypto_marketplace_buy.active,
+.crypto_marketplace_sell.active {
+  display: block;
+}
+
+.crypto_marketplace_tabs_buy.active,
+.crypto_marketplace_tabs_sell.active {
+  /* Add styles for active state, like a different background or text color */
 }
 
 .checkpoints_header {
